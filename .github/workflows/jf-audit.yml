@@ -31,4 +31,4 @@ jobs:
           jf --version
           jf audit \
             --sast \
-            --watches=mikios-sast-watch
+            --project=mikios
