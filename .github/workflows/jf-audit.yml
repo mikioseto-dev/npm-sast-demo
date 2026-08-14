@@ -20,9 +20,8 @@ jobs:
       - name: Setup JFrog CLI
         uses: jfrog/setup-jfrog-cli@v5
         env:
-          JF_URL: https://solenglatest.jfrog.io 
-        with:
-          oidc-provider-name: mikios-github-oidc 
+          JF_URL: https://solenglatest.jfrog.io
+          JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
 
       - name: Verify JFrog connection
         run: jf rt ping
